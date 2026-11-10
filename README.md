@@ -35,6 +35,18 @@ By combining speech recognition, grammar correction, and machine translation, th
 | Grammar Correction | MRNH/mbart-german-grammar-corrector |
 | Translation | Aparna852/de-en-translator |
 
+
+## Project Structure
+
+| File | Purpose |
+|---|---|
+| `notebooks/german_tutor.ipynb` | Notebook for loading audio recordings, preprocessing audio, testing Whisper models, correcting German grammar, and translating German speech into English. |
+| `app.py` | Streamlit application that allows users to upload German audio and view transcription, grammar correction, and translation results. |
+| `data/` | Directory for storing datasets and sample audio files used for testing and evaluation. |
+| `requirements.txt` | Python dependencies required to run the application, including Transformers, PyTorch, Librosa, and Streamlit. |
+| `README.md` | Project documentation explaining the problem statement, impact, scope, selected AI models, and project overview. |
+
+
 ## Technologies
 
 - Python
