@@ -1,5 +1,7 @@
+
 # German-AI-Tutor
-An AI-powered German speaking assistant designed to help non-native German learners practise speaking, improve their grammar, and understand spoken German through transcription and translation.
+
+An AI-powered German speaking assistant designed to help non-native German learners understand spoken German, identify grammatical mistakes, and translate their speech into English using deep learning and natural language processing models.
 
 ## Problem Statement
 
@@ -9,9 +11,9 @@ This project aims to address these challenges through an AI-powered application 
 
 ## Impact
 
-The project aims to make German language learning more accessible by providing learners with an interactive tool for practising spoken German.
+The project aims to make German language learning more accessible by providing learners with an interactive tool for analysing their spoken German.
 
-By combining speech recognition, grammar correction, and machine translation, the application can help users identify mistakes, understand their sentences, and improve their German communication skills.
+By combining speech recognition, grammar correction, and machine translation, the application can help users understand their spoken sentences, identify grammatical mistakes, and improve their German communication skills.
 
 ## Scope
 
@@ -19,33 +21,33 @@ By combining speech recognition, grammar correction, and machine translation, th
 
 **Key Deliverables:**
 
-- Audio input through uploaded or recorded German speech.
+- Audio input through uploaded German audio recordings (M4A/MP3).
 - German speech transcription using Whisper models.
+- Comparison of general-purpose and German-specific speech recognition models.
 - German grammar correction using an mBART-based model.
-- German-to-English translation.
+- German-to-English translation of corrected German sentences.
 - A Streamlit interface for interacting with the AI pipeline.
-- Planned pronunciation assessment and personalized learning feedback.
+- Future pronunciation assessment and learning feedback.
 
 ## AI Models
 
 | Component | Selected Model |
 |---|---|
-| Speech Recognition | openai/whisper-base |
-| German Speech Recognition | bofenghuang/whisper-small-cv11-german |
-| Grammar Correction | MRNH/mbart-german-grammar-corrector |
-| Translation | Aparna852/de-en-translator |
-
+| Speech Recognition (Baseline) | `openai/whisper-base` |
+| German Speech Recognition | `bofenghuang/whisper-small-cv11-german` |
+| Grammar Correction | `MRNH/mbart-german-grammar-corrector` |
+| German-to-English Translation | `Aparna852/de-en-translator` |
 
 ## Project Structure
 
 | File | Purpose |
 |---|---|
-| `notebooks/german_tutor.ipynb` | Notebook for loading audio recordings, preprocessing audio, testing Whisper models, correcting German grammar, and translating German speech into English. |
-| `app.py` | Streamlit application that allows users to upload German audio and view transcription, grammar correction, and translation results. |
+| `notebooks/german_tutor.ipynb` | Notebook for loading and preprocessing audio recordings, testing and comparing Whisper models, correcting German grammar, and translating German speech into English. |
+| `app.py` | Planned Streamlit application that will allow users to upload German audio and view transcription, grammar correction, and translation results. |
 | `data/` | Directory for storing datasets and sample audio files used for testing and evaluation. |
-| `requirements.txt` | Python dependencies required to run the application, including Transformers, PyTorch, Librosa, and Streamlit. |
+| `requirements.txt` | Python dependencies required to run the project, including Transformers, PyTorch, Librosa, Datasets, and SoundFile. |
+| `.gitignore` | Specifies files and folders that should not be uploaded to GitHub, such as temporary files, environment variables, and personal audio recordings. |
 | `README.md` | Project documentation explaining the problem statement, impact, scope, selected AI models, and project overview. |
-
 
 ## Technologies
 
@@ -53,6 +55,7 @@ By combining speech recognition, grammar correction, and machine translation, th
 - Hugging Face Transformers
 - PyTorch
 - Librosa
+- Hugging Face Datasets
 - Streamlit
 - Google Colab
 
